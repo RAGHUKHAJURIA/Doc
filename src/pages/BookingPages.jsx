@@ -21,7 +21,7 @@ const BookingPage = () => {
   const getUserData = async () => {
     try {
       const res = await axios.post(
-        "/api/v1/doctor/getDoctorById",
+        "https://vercel-backend-henna.vercel.app/api/v1/doctor/getDoctorById",
         { doctorId: params.doctorId },
         {
           headers: {
@@ -41,7 +41,7 @@ const BookingPage = () => {
     try {
       dispatch(showLoadings());
       const res = await axios.post(
-        "/api/v1/user/booking-availability",
+        "https://vercel-backend-henna.vercel.app/api/v1/user/booking-availability",
         { doctorId: params.doctorId, date, time },
         {
           headers: {

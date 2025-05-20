@@ -13,7 +13,7 @@ const Users = () => {
   //get users (unchanged)
   const getUsers = async () => {
     try {
-      const res = await axios.get("/api/v1/admin/getAllUsers", {
+      const res = await axios.get("https://vercel-backend-henna.vercel.app/api/v1/admin/getAllUsers", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
