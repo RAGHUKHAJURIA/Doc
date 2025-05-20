@@ -1,0 +1,113 @@
+/* Profile Page Styles */
+.profile-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.profile-title {
+  color: #1e40af !important;
+  text-align: center;
+  margin-bottom: 8px !important;
+}
+
+.profile-subtitle {
+  display: block;
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.form-section-card {
+  margin-bottom: 24px;
+  border-radius: 8px !important;
+  border: 1px solid #f0f0f0;
+}
+
+.form-section-card .ant-card-head {
+  background-color: #f8fafc;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.form-input {
+  border-radius: 6px;
+  padding: 10px 15px;
+}
+
+.form-input .ant-input-prefix {
+  color: #64748b;
+  margin-right: 8px;
+}
+
+.time-picker-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.time-picker-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.time-picker-icon {
+  color: #64748b;
+  font-size: 16px;
+}
+
+.time-separator {
+  color: #64748b;
+  padding: 0 8px;
+}
+
+.custom-timepicker {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+}
+
+.custom-timepicker:hover {
+  border-color: #3b82f6;
+}
+
+.custom-timepicker:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.update-btn {
+  padding: 0 32px;
+  height: 40px;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .time-picker-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .time-separator {
+    display: none;
+  }
+  
+  .form-actions {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,67 @@
+/* Doctor Appointments Page Styles */
+.doctor-appointments-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.appointments-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.appointments-header {
+  margin-bottom: 24px;
+}
+
+.appointments-header h3 {
+  color: #1e40af;
+}
+
+.patient-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.datetime-cell {
+  display: flex;
+  gap: 8px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.approve-btn {
+  background-color: #52c41a;
+  border-color: #52c41a;
+}
+
+.appointments-table .ant-table-thead > tr > th {
+  background-color: #f8fafc;
+  font-weight: 600;
+}
+
+/* Status tags */
+.ant-tag {
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .doctor-appointments-container {
+    padding: 10px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .datetime-cell {
+    flex-direction: column;
+    gap: 4px;
+  }
+}

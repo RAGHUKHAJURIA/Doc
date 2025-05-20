@@ -1,0 +1,51 @@
+/* Appointments Page Styles */
+.appointments-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.appointments-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.page-title {
+  color: #1e40af !important;
+  margin-bottom: 8px !important;
+}
+
+.page-subtitle {
+  display: block;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.appointments-table {
+  margin-top: 20px;
+}
+
+.datetime-cell {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Status tags */
+.ant-tag {
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .appointments-container {
+    padding: 10px;
+  }
+  
+  .datetime-cell {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+}

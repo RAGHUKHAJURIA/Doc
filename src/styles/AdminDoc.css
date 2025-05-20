@@ -1,0 +1,64 @@
+/* Doctors Page Styles */
+.doctors-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.doctors-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.page-title {
+  color: #1e40af;
+  margin-bottom: 24px !important;
+}
+
+.doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.doctor-icon {
+  color: #3b82f6;
+  font-size: 18px;
+}
+
+.contact-info {
+  font-weight: 500;
+}
+
+.status-tag {
+  border-radius: 4px;
+  font-weight: 500;
+  padding: 4px 8px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.approve-btn {
+  background-color: #52c41a;
+  border-color: #52c41a;
+}
+
+.doctors-table .ant-table-thead > tr > th {
+  background-color: #f8fafc;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .doctors-container {
+    padding: 10px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 4px;
+  }
+}   

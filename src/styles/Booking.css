@@ -1,0 +1,96 @@
+/* Simple Booking Page Styles */
+.simple-booking-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.simple-booking-card {
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.simple-booking-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.simple-doctor-info {
+  margin-bottom: 20px;
+}
+
+.simple-doctor-name {
+  color: #1890ff;
+  margin-bottom: 15px;
+}
+
+.simple-doctor-details {
+  margin-bottom: 20px;
+}
+
+.simple-doctor-details p {
+  margin: 8px 0;
+}
+
+.simple-booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: 500;
+}
+
+.simple-date-picker,
+.simple-time-picker {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+}
+
+.simple-action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.simple-check-btn,
+.simple-book-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.simple-check-btn {
+  background-color: #1890ff;
+  color: white;
+}
+
+.simple-book-btn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.simple-book-btn.available {
+  background-color: #52c41a;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .simple-action-buttons {
+    flex-direction: column;
+  }
+}

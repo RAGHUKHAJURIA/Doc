@@ -1,0 +1,81 @@
+/* Apply Doctor Page Styles */
+.apply-doctor-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+}
+
+.subtitle {
+  color: #64748b;
+  font-size: 16px;
+}
+
+.form-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.section-title {
+  color: #1e40af !important;
+  margin-bottom: 20px !important;
+  font-weight: 500 !important;
+}
+
+.form-input {
+  border-radius: 6px;
+  padding: 10px 15px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.form-input:hover {
+  border-color: #93c5fd;
+}
+
+.form-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.time-picker {
+  width: 100%;
+}
+
+.submit-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-card {
+    padding: 20px;
+  }
+  
+  .section-title {
+    font-size: 18px !important;
+  }
+}

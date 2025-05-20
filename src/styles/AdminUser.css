@@ -1,0 +1,59 @@
+/* Users Page Styles */
+.users-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.users-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.page-title {
+  color: #1e40af !important;
+  margin-bottom: 8px !important;
+}
+
+.page-subtitle {
+  display: block;
+  margin-bottom: 24px;
+  color: #64748b;
+}
+
+.user-info, .email-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-icon, .email-icon {
+  color: #3b82f6;
+}
+
+.doctor-tag {
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.block-btn {
+  border-radius: 4px;
+}
+
+.users-table .ant-table-thead > tr > th {
+  background-color: #f8fafc;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .users-container {
+    padding: 10px;
+  }
+  
+  .user-info, .email-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
