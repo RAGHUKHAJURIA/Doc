@@ -19,7 +19,7 @@ const Login = () => {
         "https://vercel-backend-henna.vercel.app/api/v1/user/login",
         values
       );
-      window.location.reload();
+      // window.location.reload();
       dispatch(hideLoading());
       if (res.data.success) {
         localStorage.setItem("token", res.data.token);
