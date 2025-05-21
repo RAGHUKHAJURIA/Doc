@@ -52,14 +52,15 @@
 
 // export default ProtectedRoute;
 
+
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import axios from "axios";
-import { useSelector, useDispatch } from "react-redux";
-import { hideLoading, showLoadings } from "../redux/features/alertSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { showLoadings, hideLoading } from "../redux/features/alertSlice";
 import { setUser } from "../redux/features/userSlice";
 
-function ProtectedRoute({ children }) {
+const ProtectedRoute = ({ children }) => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.user);
   const [loading, setLoading] = useState(true);
@@ -69,7 +70,7 @@ function ProtectedRoute({ children }) {
       dispatch(showLoadings());
       const res = await axios.post(
         "https://vercel-backend-henna.vercel.app/api/v1/user/getUserData",
-        {},
+        {}, // Don't need to send token in body
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -83,6 +84,7 @@ function ProtectedRoute({ children }) {
         localStorage.clear();
       }
     } catch (error) {
+      console.error("Auth Error:", error.message);
       localStorage.clear();
       dispatch(hideLoading());
     } finally {
@@ -91,23 +93,22 @@ function ProtectedRoute({ children }) {
   };
 
   useEffect(() => {
+    // Only call getUser once, if user is not already set
     if (!user) {
       getUser();
     } else {
       setLoading(false);
     }
-  }, [user]);
+  }, []); // Empty dependency array ensures it runs only once
 
-  if (loading) {
-    return null; // optional: return a spinner if needed
-  }
+  if (loading) return null; // optionally, return a spinner component
 
-  if (localStorage.getItem("token")) {
-    return children;
-  } else {
+  // If token is missing, redirect to login
+  if (!localStorage.getItem("token")) {
     return <Navigate to="/login" />;
   }
-}
+
+  return children;
+};
 
 export default ProtectedRoute;
-
