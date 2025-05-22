@@ -187,7 +187,7 @@ const BookingPage = () => {
   const getUserData = async () => {
     try {
       const res = await axios.post(
-        "https://vercel-backend-henna.vercel.app/api/v1/doctor/getDoctorById",
+        "https://doc-backend-render.onrender.com/api/v1/doctor/getDoctorById",
         { doctorId: params.doctorId },
         {
           headers: {
@@ -206,7 +206,7 @@ const BookingPage = () => {
     try {
       dispatch(showLoadings());
       const res = await axios.post(
-        "https://vercel-backend-henna.vercel.app/api/v1/user/booking-availability",
+        "https://doc-backend-render.onrender.com/api/v1/user/booking-availability",
         { doctorId: params.doctorId, date, time },
         {
           headers: {
@@ -230,12 +230,12 @@ const BookingPage = () => {
   const handleBooking = async () => {
     try {
       setIsAvailable(true);
-      if (!date && !time) {
+      if (!date || !time) { //&& -> ||
         return alert("Date & Time Required");
       }
       dispatch(showLoadings());
       const res = await axios.post(
-        "https://vercel-backend-henna.vercel.app/api/v1/user/book-appointment",
+        "https://doc-backend-render.onrender.com/api/v1/user/book-appointment",
         {
           doctorId: params.doctorId,
           userId: user._id,

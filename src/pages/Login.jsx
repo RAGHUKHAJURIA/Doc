@@ -16,7 +16,7 @@ const Login = () => {
     try {
       dispatch(showLoadings());
       const res = await axios.post(
-        "https://vercel-backend-henna.vercel.app/api/v1/user/login",
+        "https://doc-backend-render.onrender.com/api/v1/user/login",
         values
       );
       window.location.reload();

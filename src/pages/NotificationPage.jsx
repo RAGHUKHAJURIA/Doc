@@ -20,7 +20,7 @@ const NotificationPage = () => {
     try {
       dispatch(showLoadings());
       const res = await axios.post(
-        "https://vercel-backend-henna.vercel.app/api/v1/user/get-all-notification",
+        "https://doc-backend-render.onrender.com/api/v1/user/get-all-notification",
         {
           userId: user._id,
         },
@@ -54,7 +54,7 @@ const NotificationPage = () => {
     try {
       dispatch(showLoadings());
       const res = await axios.post(
-        "https://vercel-backend-henna.vercel.app/api/v1/user/delete-all-notification",
+        "https://doc-backend-render.onrender.com/api/v1/user/delete-all-notification",
         { userId: user._id },
         {
           headers: {

@@ -11,7 +11,7 @@ const Appointments = () => {
 
   const getAppointments = async () => {
     try {
-      const res = await axios.get("https://vercel-backend-henna.vercel.app/api/v1/user/user-appointments", {
+      const res = await axios.get("https://doc-backend-render.onrender.com/api/v1/user/user-appointments", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

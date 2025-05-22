@@ -14,7 +14,7 @@ function ProtectedRoute({ children }) {
     try {
       // dispatch(showLoadings());
       const res = await axios.post(
-        "https://vercel-backend-henna.vercel.app/api/v1/user/getUserData",
+        "https://doc-backend-render.onrender.com/api/v1/user/getUserData",
         {
           token: localStorage.getItem("token"),
         },

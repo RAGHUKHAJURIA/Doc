@@ -38,7 +38,7 @@ const ApplyDoctor = () => {
 
       dispatch(showLoadings());
       const res = await axios.post(
-        "https://vercel-backend-henna.vercel.app/api/v1/user/apply-doctor",
+        "https://doc-backend-render.onrender.com/api/v1/user/apply-doctor",
         {
           ...values,
           userId: user._id,

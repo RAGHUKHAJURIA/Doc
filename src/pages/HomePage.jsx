@@ -13,7 +13,7 @@ const HomePage = () => {
   // login user data (unchanged)
   const getUserData = async () => {
     try {
-      const res = await axios.get("https://vercel-backend-henna.vercel.app/api/v1/user/getAllDoctors", {
+      const res = await axios.get("https://doc-backend-render.onrender.com/api/v1/user/getAllDoctors", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
